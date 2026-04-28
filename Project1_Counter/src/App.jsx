@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 import { useState } from "react";
 import Viewer from "./component/Viewer";
-import Controller from './component/Controller';
+import Controller from "./component/Controller";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,8 +9,8 @@ function App() {
     setCount(count + value);
   };
 
-  return ( 
-    <div className='App'>
+  return (
+    <div className="App">
       <h1>Simple Counter</h1>
       <section>
         <Viewer count={count} />
@@ -18,7 +18,7 @@ function App() {
       <sectition>
         <Controller handleSetCount={handleSetCount} />
       </sectition>
-    </div>     //<div className='App' />;
+    </div> //<div className='App' />;
   );
 }
 export default App;
