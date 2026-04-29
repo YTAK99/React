@@ -1,0 +1,69 @@
+.App {
+  max-width: 500px;               /* 앱 페이지 최대 너비 고정 */
+  width: 100%;                    /* 페이지 너비를 브라우저의 100%로 설정 */
+  margin: 0 auto;                 /* 여백을 위아래는 0, 좌우는 자동으로 */
+  box-sizing: border-box;         /* 요소의 크기를 어떤 것을 기준으로 계산할지 */
+  padding: 20px;                  /* 내부 여백 */
+  border: 2px solid purple;     /* 경계선 */
+  display: flex;                  /* 페이지의 요소를 브라우저에서 어떻게 보여줄지 */
+                                  /* 기본값은 block(배치 요소를 한줄로 꽉 채우고 세로로 배치) */
+  flex-direction: column;         /* 플렉스 컨테이너에 있는 요소들의 배치 방향 조절(기본값은 row(수평)) */
+  gap: 30px;                      /* App 컴포넌트에서 자식 요소 간의 여백을 조절하는 속성 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

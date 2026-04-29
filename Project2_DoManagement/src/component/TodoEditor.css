@@ -1,0 +1,27 @@
+.TodoEditor .editor_wrapper {       /* 입력 폼과 버튼을 감싸는 요소에 */
+    width: 100%;                    /* 스타일링 설정 */
+    display: flex;
+    gap: 10px;
+}
+
+.TodoEditor input {             /* 입력 폼에 스타일 설정 */
+    flex: 1;                    /* flex를 1로 설정하면 해당 요소의 너비가 */
+    box-sizing: border-box;     /* 브라우저의 크기에 따라 유연하게 변함 */
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.TodoEditor input:focus {       /* 입력 폼을 클릭했을 때의 스타일 설정 */
+    outline: none;              /* none으로 하면 클릭했을때 두꺼운 경계선 X */
+    border: 1px solid #1f93ff;
+}
+
+.TodoEditor button {            /* 입력 폼 오른쪽에 위치할 버튼 스타일 */
+    cursor: pointer;            /* 버튼에 마우스를 올릴때 손 모양으로 바뀜 */
+    width: 80px;
+    border: none;
+    background-color: #1f93ff;
+    color: white;
+    border-radius: 5px;
+}
