@@ -13,6 +13,11 @@ const TodoList = ({ todo, onUpdate, onDelete }) => {    // Props를 구조 분�
         : todo.filter((it) => 
             it.content.toLowerCase().includes(search.toLowerCase()));
     };
+    const analyzeTodo = () => {
+        const totalCount = todo.length;
+        const doneCount = todo.filter((it) => it.isDone).length;
+        const notDoneCount = totalCount - doneCount;
+    }
 
     return (
         <div className="TodoList">
