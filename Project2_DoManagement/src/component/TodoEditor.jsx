@@ -1,7 +1,9 @@
 import "./TodoEditor.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { TodoDispatchContext } from "../App";
 
-const TodoEditor = ({ onCreate }) => {     //Props 객체를 구조 분해 할당
+const TodoEditor = () => {     //Props 객체를 구조 분해 할당
+    const { onCreate } = useContext(TodoDispatchContext);
     const [content, setContent] = useState(""); //사용자가 입력 폼에 입력한 데이터를 저장할 State 변수
     const inputRef = useRef();          // 할일 입력 폼을 제어할 객체 inputRef를 생성
     const onChangeContent = (e) => {        // 입력 폼의 onChange 이벤트 핸들러 만듦
