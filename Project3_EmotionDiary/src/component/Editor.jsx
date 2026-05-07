@@ -1,5 +1,5 @@
 import "./Editor.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { emotionList, getFormattedDate } from "../util";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
@@ -36,6 +36,14 @@ const Editor = ({ initData, onSubmit }) => {
             emotionId,
         });
     };
+    useEffect(() => {
+        if (initData) {
+            setState({
+                ...initData,
+                date: getFormattedDate(new Date(parseInt(initData.date))),
+            });
+        }
+    }, [initData]);
 
     return (
         <div className="Editor">
