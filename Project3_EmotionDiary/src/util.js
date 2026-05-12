@@ -79,5 +79,5 @@ export const getMonthRangeByDate = (date) => {
 
 export const setPageTitle = (title) => {
     const titleElement = document.getElementsByTagName("title")[0];
-    titleElement.innerText = title;
+    titleElement.innerHTML = title;
 };

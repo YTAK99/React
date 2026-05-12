@@ -1,0 +1,27 @@
+.board-row {
+    display: flex;
+  }
+  
+  .square {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+  
+    background-color: black;   /* 버튼 배경색 */
+    color: #00ff88;             /* 글자색 */
+  
+    border: 2px solid #00ff88;
+    font-size: 32px;
+    font-weight: bold;
+  
+    cursor: pointer;
+  
+    transition: 0.2s;
+  }
+  
+  .square:hover {
+    background-color: #444;
+  }

@@ -7,17 +7,17 @@ import DiaryList from "../component/DiaryList";
 
 const Home = () => {
     const data = useContext(DiaryStateContext);
-    const [pivotDate, setPivoDate] = useState(new Date());
+    const [pivotDate, setPivotDate] = useState(new Date());
     const [filteredData, setFilteredData] = useState([]);
     const headerTitle = `${pivotDate.getFullYear()}년
                          ${pivotDate.getMonth() + 1}월`;
     
     const onIncreaseMonth = () => {
-        setPivoDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth() +1));
+        setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth() +1));
     };
 
     const onDecreaseMonth = () => {
-        setPivoDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth() -1));
+        setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth() -1));
     };
 
     useEffect(() => {
@@ -25,7 +25,8 @@ const Home = () => {
             const { beginTimeStamp, endTimeStamp } = getMonthRangeByDate(pivotDate);
             setFilteredData(
                 data.filter(
-                    (it) => beginTimeStamp <= it.date <= endTimeStamp
+                    (it) =>
+                        beginTimeStamp <= it.date && it.date <= endTimeStamp
                 )
             );
         }
